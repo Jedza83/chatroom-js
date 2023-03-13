@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITBootcamp Chat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Naslovi -->
+    <header class="row">
+      <h1 class="col-12 col-t-12">ITBootcamp Chat</h1>
+      <h2 class="col-12 col-t-12">Choose a chatroom</h2>
+    </header>
+    <!-- Dugmad za promenu sobe -->
+    <nav id="navBtns" class="row">
+      <span class="col-2 col-t-2">&nbsp;</span>
+      <button class="col-2 col-t-2">#general</button>
+      <button id="js" class="col-2 col-t-2">#js</button>
+      <button id="homeworks" class="col-2 col-t-2">#homeworks</button>
+      <button id="tests" class="col-2 col-t-2">#tests</button>
+      <span class="col-2 col-t-2">&nbsp;</span>
+    </nav>
+    <!--  Ispisivanje poruka -->
+    <section class="row">
+      <div class="col-2 col-t-2 remove">&nbsp;</div>
+      <div class="col-8 col-t-8" id="chat-section">
+        <ul id="poruke-ul"></ul>
+      </div>
+      <div class="col-2 col-t-2 remove">&nbsp;</div>
+    </section>
+    <!-- Inputi za unos poruke i username-a -->
+    <div id="input2" class="row">
+      <h2 id="noviUser" class="col-3 col-t-2"></h2>
+      <input
+        type="text"
+        name="update"
+        id="update"
+        class="col-4 col-t-5"
+        placeholder="Update username"
+      />
+      <button type="submit" class="col-2 col-t-3" id="btnUpdate">Update</button>
+      <span class="col-3 col-t-2">&nbsp;</span>
+    </div>
+    <div id="input1" class="row">
+      <span class="col-3 col-t-2">&nbsp;</span>
+      <textarea class="col-4 col-t-5" name="poruka" id="poruka"></textarea>
+      <button type="submit" id="send" class="col-2 col-t-3">Send</button>
+      <span class="col-3 col-t-2">&nbsp;</span>
+    </div>
+    <div class="row">
+      <span class="col-4 col-t-4">&nbsp;</span>
+      <input
+        type="color"
+        id="color"
+        name="color"
+        value="#ffffff"
+        class="col-2 col-t-2"
+      />
+      <button id="colorBtn" type="submit" class="col-2 col-t-2">
+        Update color
+      </button>
+      <span class="col-4 col-t-4">&nbsp;</span>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDMjQhFsCp7daLiHqM8w0B0AJpo7fKnPVE",
+        authDomain: "jelenin-project.firebaseapp.com",
+        projectId: "jelenin-project",
+        storageBucket: "jelenin-project.appspot.com",
+        messagingSenderId: "537681446589",
+        appId: "1:537681446589:web:c5b76847cef5311a9e99d4",
+        measurementId: "G-R2KQQSYHZ9",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      let db = firebase.firestore();
+    </script>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

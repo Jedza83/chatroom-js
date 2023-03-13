@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+  background-image: url(2.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+h1 {
+  font-size: 60px;
+  color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+h2 {
+  font-size: 40px;
+  color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6,
+      0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6,
+      0 0 40px #0073e6, 0 0 50px #0073e6, 0 0 60px #0073e6, 0 0 70px #0073e6;
+  }
+}
+.row {
+  width: 100%;
+  overflow: hidden;
+}
+button {
+  height: 50px;
+  margin: 5px;
+  background-color: rgb(195, 42, 255, 0.7);
+  color: #e4e5fa;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+}
+li {
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #1c1a45;
+  font-size: 18px;
+  margin: 10px 25px;
+  border-radius: 30px;
+  border: 5px solid rgb(195, 42, 255);
+  text-align: left;
+  list-style-type: none;
+  line-height: 24px;
+  width: 500px;
+  padding: 15px;
+}
+.mojaPoruka {
+  background-color: rgba(15, 10, 55, 0.7);
+  border-radius: 30px;
+  text-align: right;
+  display: inline-block;
+  color: white;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(195, 42, 255);
+  cursor: pointer;
+}
+.general {
+  background-color: rgba(33, 3, 81, 0.7);
+  color: rgb(195, 42, 255);
+  border: 3px solid rgb(195, 42, 255);
+}
+input,
+textarea {
+  height: 50px;
+  margin: 5px;
+  padding-left: 15px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+input:focus,
+textarea:focus {
+  border: 3px blueviolet solid;
+}
+input:focus,
+button:focus,
+textarea:focus {
+  outline-width: 0;
+}
+
+#colorBtn {
+  background-color: #1c1a45;
+}
+.kantaS {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  float: right;
+}
+
+#color {
+  padding: 7px 50px;
+}
+
+.username {
+  color: #4f4fb0;
+  font-weight: bold;
+}
+.date {
+  color: #7f4b9b;
+  font-size: 14px;
+}
+
+/*pravilo mobile first*/
+@media only screen and (max-width: 500px) {
+  [class*="col-"] {
+    width: 100%;
+    margin: 5px auto;
+  }
+  li {
+    width: 70%;
+    float: left;
+  }
+}
+
+/*Za TABLET*/
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+  [class*="col-t-"] {
+    float: left;
+    font-size: 15px;
+  }
+  li {
+    width: 80%;
+    float: left;
+  }
+  button,
+  input,
+  textarea {
+    height: 40px;
+  }
+  .col-t-1 {
+    width: 8.33%;
+  }
+  .col-t-2 {
+    width: 16.66%;
+  }
+  .col-t-3 {
+    width: 25%;
+  }
+  .col-t-4 {
+    width: 33.33%;
+  }
+  .col-t-5 {
+    width: 41.66%;
+  }
+  .col-t-6 {
+    width: 50%;
+  }
+  .col-t-7 {
+    width: 58.33%;
+  }
+  .col-t-8 {
+    width: 66.66%;
+  }
+  .col-t-9 {
+    width: 75%;
+  }
+  .col-t-10 {
+    width: 83.33%;
+  }
+  .col-t-11 {
+    width: 91.66%;
+  }
+  .col-t-12 {
+    width: 100%;
+  }
+}
+
+/*za desktop*/
+@media only screen and (min-width: 1001px) {
+  [class*="col-"] {
+    float: left;
+  }
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
