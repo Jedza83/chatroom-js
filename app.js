@@ -91,7 +91,7 @@ btnUpdate.addEventListener("click", () => {
   makeChange();
   setTimeout(() => {
     ime.remove();
-  }, 3000);
+  }, 5000);
   window.location.reload();
 });
 
